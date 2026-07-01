@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ── Primary SEO ── -->
+    <title>Age Calculator — Find Your Exact Age in Years, Months &amp; Days</title>
+    <meta name="description" content="Free online age calculator. Instantly find your exact age in years, months, days, hours, and minutes. Also shows zodiac sign, generation, birthstone, planet ages, and much more." />
+    <meta name="keywords" content="age calculator, calculate age, how old am I, birthday calculator, age in days, zodiac sign by birthday, Chinese zodiac, birthstone by month, generation calculator, planet age calculator" />
+    <meta name="author" content="AgeCalculator.com" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.agecalculator.com/" />
+    <link rel="icon" type="image/jpeg" href="/logo.jpg" />
+    <link rel="apple-touch-icon" href="/logo.jpg" />
+
+    <!-- ── Open Graph ── -->
+    <meta property="og:type"        content="website" />
+    <meta property="og:url"         content="https://www.agecalculator.com/" />
+    <meta property="og:title"       content="Age Calculator — Find Your Exact Age Instantly" />
+    <meta property="og:description" content="Free tool to calculate your exact age with zodiac, generation, birthstone, planet ages and more." />
+    <meta property="og:locale"      content="en_US" />
+
+    <!-- ── Twitter Card ── -->
+    <meta name="twitter:card"        content="summary" />
+    <meta name="twitter:title"       content="Age Calculator — Find Your Exact Age Instantly" />
+    <meta name="twitter:description" content="Free tool to calculate your exact age with zodiac, generation, birthstone, planet ages and more." />
+
+    <!-- ── Security headers (best-effort via meta) ── -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options"        content="SAMEORIGIN" />
+    <meta http-equiv="Referrer-Policy"        content="strict-origin-when-cross-origin" />
+    <meta http-equiv="Permissions-Policy"     content="camera=(), microphone=(), geolocation=()" />
+    <!-- Note: a proper Content-Security-Policy should be set via HTTP response headers on your server. -->
+
+    <!-- ── Structured Data: WebApplication ── -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Age Calculator",
+      "url": "https://www.agecalculator.com/",
+      "description": "Free online age calculator that computes your exact age in years, months, days, hours, minutes and seconds. Also provides zodiac sign, generation, birthstone, planet ages and more.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "featureList": [
+        "Exact age in years months and days",
+        "Total days weeks hours minutes seconds",
+        "Western zodiac sign",
+        "Chinese zodiac sign",
+        "Birthstone and birth flower",
+        "Generation label",
+        "Life stage",
+        "Planet age equivalents",
+        "Dog and cat age equivalents",
+        "Retirement year estimate"
+      ]
+    }
+    </script>
+
+    <!-- ── Structured Data: FAQPage ── -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "How accurate is this age calculator?", "acceptedAnswer": { "@type": "Answer", "text": "Our age calculator is highly accurate. It calculates your age by comparing your birth date with the current date, accounting for leap years and varying month lengths." } },
+        { "@type": "Question", "name": "Is my personal information safe?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All calculations happen directly in your web browser. We do not send your birth date or any personal information to any server." } },
+        { "@type": "Question", "name": "What extra information does the calculator show?", "acceptedAnswer": { "@type": "Answer", "text": "Beyond your basic age, the tool shows western and Chinese zodiac signs, birthstone, birth flower, generation label, life stage, retirement year, dog and cat age equivalents, heartbeats, breaths, and planet ages." } },
+        { "@type": "Question", "name": "Does this tool work for leap year birthdays?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The calculator properly handles leap years and February 29 birthdays." } }
+      ]
+    }
+    </script>
+
+    <!-- ── Structured Data: BreadcrumbList ── -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.agecalculator.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Age Calculator", "item": "https://www.agecalculator.com/#calculator" }
+      ]
+    }
+    </script>
+
+    <!-- ── AdSense placeholder (replace data-ad-client with your publisher ID) ──
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+    -->
+
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <!-- ══════════ HEADER ══════════ -->
+    <header class="site-header" id="site-header">
+      <div class="container header-inner">
+        <a href="#" class="logo" aria-label="Age Calculator Home">
+          <img src="/logo.jpg" alt="Age Calculator Logo" class="logo-badge" />
+          <span class="logo-text">
+            <span class="logo-title">Age Calculator</span>
+            <span class="logo-sub">Free Online Tool</span>
+          </span>
+        </a>
+
+        <nav class="nav-desktop" aria-label="Main navigation">
+          <a href="#calculator">Calculator</a>
+          <a href="#about">About</a>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#blog">Blog</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">☰</button>
+      </div>
+
+      <nav class="nav-mobile" id="mobileNav" aria-label="Mobile navigation" hidden>
+        <a href="#calculator">Calculator</a>
+        <a href="#about">About</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#blog">Blog</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </header>
+
+    <!-- ══════════ BREADCRUMBS ══════════ -->
+    <div class="breadcrumbs">
+      <div class="container">
+        <nav aria-label="Breadcrumb">
+          <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemscope itemprop="itemListElement" itemtype="https://schema.org/ListItem">
+              <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+              <meta itemprop="position" content="1" />
+              <span class="bc-sep" aria-hidden="true">/</span>
+            </li>
+            <li itemscope itemprop="itemListElement" itemtype="https://schema.org/ListItem">
+              <span itemprop="name" class="bc-current" aria-current="page">Age Calculator</span>
+              <meta itemprop="position" content="2" />
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <main id="main-content">
+      <!-- ══════════ HERO ══════════ -->
+      <section class="hero" aria-label="Page hero">
+        <div class="container hero-inner">
+          <p class="hero-eyebrow">Free · No Sign-up · 100% Private</p>
+          <h1 class="hero-title">Free Online Age Calculator</h1>
+          <p class="hero-lead">
+            Enter your date of birth and instantly find your exact age — plus zodiac sign, birthstone,
+            generation, planet ages, and over a dozen more details.
+          </p>
+          <div class="hero-badges">
+            <span>✓ No data collected</span>
+            <span>✓ Works offline</span>
+            <span>✓ Leap year safe</span>
+            <span>✓ Mobile friendly</span>
+          </div>
+          <a href="#calculator" class="btn btn-primary hero-cta">Calculate My Age ↓</a>
+        </div>
+      </section>
+
+      <!-- Top ad -->
+      <div class="container ad-wrap"><div class="ad-box" aria-hidden="true">Advertisement — 728×90</div></div>
+
+      <!-- ══════════ CALCULATOR ══════════ -->
+      <section id="calculator" class="section" aria-label="Age Calculator">
+        <div class="calc-wrap">
+          <div class="card">
+            <div class="card-header">
+              <h2>Calculate Your Age</h2>
+              <p>Enter your date of birth for a complete breakdown</p>
+            </div>
+            <div class="card-body">
+              <form id="ageForm" novalidate>
+                <label for="dob" class="field-label">Date of Birth <span class="req" aria-hidden="true">*</span></label>
+                <p class="field-hint">Format: DD/MM/YYYY — must be a past date</p>
+                <div class="date-input-wrapper">
+                  <input type="text" id="dob" name="dob" class="date-input" aria-required="true" autocomplete="bday" placeholder="DD/MM/YYYY" />
+                  <button type="button" id="calendarBtn" class="calendar-btn" aria-label="Open calendar">📅</button>
+                  <input type="date" id="dobPicker" class="date-picker" aria-hidden="true" />
+                </div>
+                <div id="dobError" class="error-box" role="alert" aria-live="assertive" hidden></div>
+                <div class="btn-row">
+                  <button type="submit" class="btn btn-primary btn-grow">Calculate Age</button>
+                  <button type="button" id="resetBtn" class="btn btn-ghost" aria-label="Reset calculator">Reset</button>
+                </div>
+              </form>
+
+              <!-- Results -->
+              <div id="results" class="results" aria-live="polite" hidden>
+                <!-- Hero age banner -->
+                <div class="age-banner">
+                  <p id="bannerLabel" class="age-banner-label">You Are</p>
+                  <div class="age-banner-nums">
+                    <div class="abn"><span id="rYears" class="abn-val">0</span><span class="abn-lbl">Years</span></div>
+                    <span class="abn-sep">|</span>
+                    <div class="abn"><span id="rMonths" class="abn-val">0</span><span class="abn-lbl">Months</span></div>
+                    <span class="abn-sep">|</span>
+                    <div class="abn"><span id="rDays" class="abn-val">0</span><span class="abn-lbl">Days</span></div>
+                  </div>
+                  <p id="bannerSub" class="age-banner-sub"></p>
+                </div>
+
+                <!-- Tabs -->
+                <div class="tabs" id="tabs" role="tablist">
+                  <button class="tab active" data-tab="overview"  role="tab">📊 Overview</button>
+                  <button class="tab" data-tab="time"      role="tab">⏱ Time Lived</button>
+                  <button class="tab" data-tab="astrology" role="tab">🔮 Astrology</button>
+                  <button class="tab" data-tab="life"      role="tab">🧬 Life Info</button>
+                  <button class="tab" data-tab="fun"       role="tab">🎉 Fun Facts</button>
+                  <button class="tab" data-tab="planets"   role="tab">🪐 Planet Ages</button>
+                </div>
+
+                <div class="tab-panels" id="tabPanels"></div>
+              </div>
+            </div>
+          </div>
+          <div class="ad-box ad-mt" aria-hidden="true">Advertisement — 728×90</div>
+        </div>
+      </section>
+
+      <!-- ══════════ ABOUT ══════════ -->
+      <section id="about" class="section section-white" aria-labelledby="about-heading">
+        <div class="container">
+          <h2 id="about-heading" class="sec-title">About This Age Calculator</h2>
+          <div class="accent-bar"></div>
+          <div class="about-grid">
+            <div class="about-copy">
+              <p>Welcome to our free online Age Calculator. Enter your date of birth and instantly get your exact age in years, months, and days — plus a full set of date-of-birth insights that go far beyond a simple year count.</p>
+              <p>The tool runs entirely inside your web browser. No data is transmitted to any server, no account is required, and nothing is stored. It works on every modern browser and every device, including phones, tablets, and desktops.</p>
+              <p>In addition to your core age, you can explore six result tabs: an Overview, a Time Lived breakdown, Astrology (western &amp; Chinese zodiac, birthstone, birth flower), Life Info (generation, life stage, retirement year), Fun Facts (dog/cat age, heartbeats, breaths), and Planet Ages showing how old you are on Mercury through Saturn.</p>
+              <h3 class="mini-title">What you get:</h3>
+              <ul class="check-grid">
+                <li>Exact age in Y / M / D</li>
+                <li>Total days, weeks, hours</li>
+                <li>Total minutes &amp; seconds</li>
+                <li>Western zodiac sign</li>
+                <li>Chinese zodiac animal</li>
+                <li>Birth month birthstone</li>
+                <li>Birth month flower</li>
+                <li>Generation label</li>
+                <li>Life stage</li>
+                <li>Retirement year estimate</li>
+                <li>Dog &amp; cat age equivalents</li>
+                <li>Planet age equivalents</li>
+              </ul>
+            </div>
+            <div class="feature-cards">
+              <div class="feature-card"><span class="fc-icon">⚡</span><div><h3>Instant Results</h3><p>Calculations complete the moment you press the button — no waiting.</p></div></div>
+              <div class="feature-card"><span class="fc-icon">🔒</span><div><h3>100% Private</h3><p>Nothing leaves your browser. No cookies, no tracking, no accounts.</p></div></div>
+              <div class="feature-card"><span class="fc-icon">🛡️</span><div><h3>Input Validated</h3><p>All input is validated and sanitised client-side before any calculation runs.</p></div></div>
+              <div class="feature-card"><span class="fc-icon">📱</span><div><h3>Works Everywhere</h3><p>Fully responsive — looks great on phones, tablets, and desktops.</p></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════ HOW IT WORKS ══════════ -->
+      <section id="how-it-works" class="section section-gray">
+        <div class="container narrow">
+          <h2 class="sec-title">How It Works</h2>
+          <div class="accent-bar"></div>
+          <p class="sec-lead">Our age calculator uses a straightforward method to determine your exact age. Here is how the calculation works step by step:</p>
+          <div class="steps">
+            <div class="step"><span class="step-num">1</span><div><h3>Enter Your Date of Birth</h3><p>Select the day, month, and year you were born using the date picker.</p></div></div>
+            <div class="step"><span class="step-num">2</span><div><h3>Click Calculate</h3><p>The calculator compares your birth date with today's date to compute the exact difference.</p></div></div>
+            <div class="step"><span class="step-num">3</span><div><h3>View Your Results</h3><p>Explore six tabs of detail — from total days lived to your zodiac sign and planet ages.</p></div></div>
+          </div>
+          <div class="ad-box ad-mt" aria-hidden="true">Advertisement — 728×90</div>
+        </div>
+      </section>
+
+      <!-- ══════════ AGE FACTS ══════════ -->
+      <section class="section section-white">
+        <div class="container narrow">
+          <h2 class="sec-title">Interesting Facts About Age</h2>
+          <div class="accent-bar"></div>
+          <div class="facts-grid">
+            <article class="fact-card"><h3>Leap Year Babies</h3><p>People born on February 29 are sometimes called "leaplings." There are about 5 million worldwide. They celebrate their actual birthday only once every four years.</p></article>
+            <article class="fact-card"><h3>Average Human Lifespan</h3><p>Global average life expectancy is about 73 years — roughly 26,660 days, or 640,000 hours. It varies by country and has been steadily rising.</p></article>
+            <article class="fact-card"><h3>The Oldest Person Ever</h3><p>Jeanne Calment of France lived to 122 years and 164 days — approximately 44,724 days of documented life.</p></article>
+            <article class="fact-card"><h3>Heartbeats in a Lifetime</h3><p>The average heart beats about 100,000 times per day — roughly 2.7 billion beats over an average lifetime.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mid ad -->
+      <div class="container ad-wrap"><div class="ad-box" aria-hidden="true">Advertisement — 300×250</div></div>
+
+      <!-- ══════════ BLOG ══════════ -->
+      <section id="blog" class="section section-gray">
+        <div class="container">
+          <h2 class="sec-title">Blog &amp; Resources</h2>
+          <div class="accent-bar"></div>
+          <p class="sec-lead">Guides, facts, and articles related to age, birthdays, astrology, and more — updated regularly.</p>
+          <div class="blog-grid" id="blogGrid"></div>
+          <div class="ad-box ad-mt" aria-hidden="true">Advertisement — 728×90</div>
+        </div>
+      </section>
+
+      <!-- ══════════ FAQ ══════════ -->
+      <section id="faq" class="section section-white">
+        <div class="container narrow">
+          <h2 class="sec-title">Frequently Asked Questions</h2>
+          <div class="accent-bar"></div>
+          <div class="faq-list" id="faqList" itemscope itemtype="https://schema.org/FAQPage"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ══════════ BLOG MODAL ══════════ -->
+    <div class="modal-overlay" id="blogModal" hidden>
+      <article class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-header">
+          <span class="badge" id="modalCategory"></span>
+          <h2 id="modalTitle"></h2>
+          <p id="modalMeta" class="modal-meta"></p>
+        </div>
+        <div class="modal-body" id="modalBody"></div>
+        <div class="modal-footer">
+          <button id="modalClose" class="btn btn-dark btn-block" aria-label="Close article">← Back to Blog</button>
+        </div>
+      </article>
+    </div>
+
+    <!-- ══════════ FOOTER ══════════ -->
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <img src="/logo.jpg" alt="Age Calculator Logo" class="logo-badge" />
+            <span class="logo-title">Age Calculator</span>
+          </div>
+          <p>A free, privacy-respecting age calculator. All calculations run in your browser — nothing is ever sent to a server.</p>
+          <div class="privacy-pill"><span class="dot"></span> 100% Client-Side — No Data Collected</div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#calculator">Age Calculator</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Features</h4>
+          <ul class="feat-list">
+            <li>✓ Exact Age (Y/M/D)</li>
+            <li>✓ Total Days &amp; Weeks</li>
+            <li>✓ Zodiac Sign Finder</li>
+            <li>✓ Chinese Zodiac</li>
+            <li>✓ Birthstone &amp; Flower</li>
+            <li>✓ Planet Age Calculator</li>
+            <li>✓ Generation Finder</li>
+            <li>✓ Retirement Estimate</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Information</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Sitemap</a></li>
+            <li><a href="#">Advertise With Us</a></li>
+          </ul>
+          <div class="security-note">🔒 <strong>Security:</strong> Input is validated and sanitised client-side. No personal data leaves your device.</div>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p id="copyright">&copy; 2026 AgeCalculator.com — All rights reserved.</p>
+        <p class="disclaimer">Disclaimer: Zodiac and lucky number features are for entertainment only and have no scientific basis.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
