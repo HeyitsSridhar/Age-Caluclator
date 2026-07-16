@@ -35,9 +35,6 @@ jobs:
       - name: Copy logo to dist
         run: cp public/logo.jpg dist/logo.jpg
 
-      - name: Create .nojekyll file
-        run: touch dist/.nojekyll
-
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
